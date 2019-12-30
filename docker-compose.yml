@@ -22,9 +22,6 @@ services:
 #      - traefik.http.routers.node.tls.certresolver=mydnschallenge
 
 networks:
-  traefikNetwork:
-    external:
-      name: traefikNetwork
   interne:
     external:
       name: interne
