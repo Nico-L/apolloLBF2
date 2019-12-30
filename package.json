@@ -1,0 +1,20 @@
+{
+  "name": "apollolbf",
+  "description": "Serveur apollo pour le site de la Bonne Fabrique",
+  "dependencies": {
+    "apollo-server": "^2.9.15",
+    "cloudinary": "1.18.1",
+    "graphql": "^14.5.8",
+    "lodash": "4.17.15"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js localhost 4000"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "@types/graphql": "14.0.1",
+    "nodemon": "2.0.2"
+  }
+}
