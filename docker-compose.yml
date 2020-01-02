@@ -5,7 +5,6 @@ services:
     image: node:latest
     networks:
       - interne
-#      - traefikNetwork
     working_dir: /home/node/app
     environment:
       - NODE_ENV=dev
@@ -14,12 +13,10 @@ services:
     ports:
       - 4000:4000
     command: "yarn start"
-#    labels:
-#      - traefik.enable=true
-#      - traefik.docker.network=traefikNetwork
-#      - traefik.http.routers.node.rule=Host(`graphql.labonnefabrique.fr`) && PathPrefix(`/apollo`)
-#      - traefik.http.routers.node.entrypoints=websecure
-#      - traefik.http.routers.node.tls.certresolver=mydnschallenge
+    environment:
+      - CLOUDINARY_SECRET=${CLOUDINARY_SECRET}
+      - CLOUDINARY_KEY=${CLOUDINARY_KEY}
+      - CLOUDINARY_NAME=${CLOUDINARY_NAME}
 
 networks:
   interne:
