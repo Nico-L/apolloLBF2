@@ -1,6 +1,6 @@
 {
-  "name": "apollolbf",
-  "description": "Serveur apollo pour le site de la Bonne Fabrique",
+  "name": "apolloserver",
+  "description": "serveur apollo pour la BF",
   "dependencies": {
     "apollo-server": "^2.9.15",
     "cloudinary": "1.18.1",
