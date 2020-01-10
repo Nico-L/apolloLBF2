@@ -5,7 +5,8 @@
     "apollo-server": "^2.9.15",
     "cloudinary": "1.18.1",
     "graphql": "^14.5.8",
-    "lodash": "4.17.15"
+    "lodash": "4.17.15",
+    "simple-oauth2": "3.1.0"
   },
   "license": "MIT",
   "main": "index.js",
