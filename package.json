@@ -2,6 +2,7 @@
   "name": "apolloserver",
   "description": "serveur apollo pour la BF",
   "dependencies": {
+    "@sendgrid/mail": "6.5.0",
     "apollo-server": "^2.9.15",
     "cloudinary": "1.18.1",
     "graphql": "^14.5.8",

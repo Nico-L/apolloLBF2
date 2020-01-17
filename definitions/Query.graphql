@@ -5,7 +5,3 @@ type Query {
 extend type Query {
   effaceImage(imageId: String!): EffaceImagePayload
 }
-
-extend type Query {
-  nextcloudAuth(email: String!): nextcloudAuthPayload
-}
