@@ -1,5 +1,6 @@
 const sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(process.env.SENDGRID_API);
+console.log("env sendgrid", process.env.SENDGRID_API);
 
 const resolvers = {
   Mutation: {
@@ -23,10 +24,10 @@ const resolvers = {
           console.error(error.toString());
 
           //Extract error msg
-          const { message, code, response } = error;
+          const {message, code, response} = error;
 
           //Extract response msg
-          const { headers, body } = response;
+          const {headers, body} = response;
           return {
             success: false
           };
