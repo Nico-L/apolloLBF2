@@ -1,6 +1,6 @@
 const sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(process.env.SENDGRID_API);
-console.log("env test sendgrid", process.env.CLOUDINARY_NAME);
+console.log("env test sendgrid bis", process.env.SENDGRID_API);
 
 const resolvers = {
   Mutation: {
