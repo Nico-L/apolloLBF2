@@ -5,3 +5,7 @@ type Query {
 extend type Query {
   effaceImage(imageId: String!): EffaceImagePayload
 }
+
+extend type Query {
+  clSignature(toSign: String!): SignaturePayload
+}
