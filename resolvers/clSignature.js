@@ -1,5 +1,5 @@
 var crypto = require("crypto");
-const api_secret = process.env.CLOUDINARY_KEY;
+const api_secret = process.env.CLOUDINARY_SECRET;
 
 const resolvers = {
   Query: {
