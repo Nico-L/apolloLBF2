@@ -1,4 +1,5 @@
 var cloudinary = require("cloudinary");
+console.log(process.env.CLOUDINARY_NAME)
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_NAME,
   api_key: process.env.CLOUDINARY_KEY,
@@ -12,6 +13,7 @@ const resolvers = {
         error,
         result
       ) {
+          console.log('result', result)
         return result.result;
       });
       return {
