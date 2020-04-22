@@ -5,8 +5,10 @@
     "@sendgrid/mail": "6.5.0",
     "apollo-server": "^2.9.15",
     "cloudinary": "1.18.1",
+    "cron": "1.7.2",
     "graphql": "^14.5.8",
     "lodash": "4.17.15",
+    "node-fetch": "^2.6.0",
     "simple-oauth2": "3.1.0"
   },
   "license": "MIT",
