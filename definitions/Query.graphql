@@ -9,3 +9,15 @@ extend type Query {
 extend type Query {
   clSignature(toSign: String!): SignaturePayload
 }
+
+extend type Query {
+    siteLogin(username: String!, password: String!): siteLoginPayload
+}
+
+extend type Query {
+    atelier(id: String!, token: String!): atelierPayload
+}
+
+extend type Query {
+    atelierNbPlacesRestantes(id: String!, token: String!): atelierNbPlacesRestantesPayload
+}
