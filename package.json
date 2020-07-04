@@ -3,7 +3,7 @@
   "description": "serveur apollo pour la BF",
   "dependencies": {
     "@sendgrid/mail": "6.5.0",
-    "apollo-server": "^2.9.15",
+    "apollo-server": "^2.14.2",
     "axios": "^0.19.2",
     "cloudinary": "1.18.1",
     "cron": "^1.7.2",
