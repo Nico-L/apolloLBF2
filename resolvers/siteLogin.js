@@ -1,11 +1,13 @@
 const axios = require('axios');
+const identifier = process.env.STRAPI_LOGIN
+const password = process.env.STRAPI_MDP
 
 const resolvers = {
     Query: {
         siteLogin: async (parent, args) => {
             token = await axios.post('http://cms.labonnefabrique.fr/auth/local', {
-                identifier: args.username,
-                password: args.password,
+                identifier: identifier,
+                password: password,
             })
             .then(response => {
                 // Handle success.

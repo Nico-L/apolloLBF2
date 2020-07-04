@@ -4,7 +4,6 @@ const resolvers = {
     Query: {
         atelierNbPlacesRestantes: async (parent, args) => {
             const adresse = 'http://cms.labonnefabrique.fr/ateliers/' + args.id
-            console.log("adresse", adresse)
             atelier = await axios.get(adresse, {
                 headers: {
                     Authorization: `Bearer ${args.token}`,

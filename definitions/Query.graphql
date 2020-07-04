@@ -11,7 +11,7 @@ extend type Query {
 }
 
 extend type Query {
-    siteLogin(username: String!, password: String!): siteLoginPayload
+    siteLogin: siteLoginPayload
 }
 
 extend type Query {
