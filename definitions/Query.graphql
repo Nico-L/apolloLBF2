@@ -21,3 +21,7 @@ extend type Query {
 extend type Query {
     atelierNbPlacesRestantes(id: String!, token: String!): atelierNbPlacesRestantesPayload
 }
+
+extend type Query {
+    findOneInscrit(id: String!, email:String!, token: String!): findOneInscritPayload
+}
