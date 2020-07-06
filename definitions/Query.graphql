@@ -27,5 +27,5 @@ extend type Query {
 }
 
 extend type Query {
-    ajoutInscription(idAtelier: String!, inscription: String!, token: String!):ajoutInscriptionPayload
+    ajoutInscription(inscription: String!, token: String!):ajoutInscriptionPayload
 }

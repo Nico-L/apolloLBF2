@@ -8,7 +8,7 @@ const resolvers = {
             const params = {
                 email: dataInscription.email,
                 lesInscrits: dataInscription.lesInscrits,
-                atelier: args.idAtelier
+                atelier: dataInscription.idAtelier
             }
             const headers = {
                 'Content-Type': 'application/json',
