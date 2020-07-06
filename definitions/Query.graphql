@@ -25,3 +25,7 @@ extend type Query {
 extend type Query {
     findOneInscrit(id: String!, email:String!, token: String!): findOneInscritPayload
 }
+
+extend type Query {
+    ajoutInscription(idAtelier: String!, inscription: String!, token: String!):ajoutInscriptionPayload
+}
