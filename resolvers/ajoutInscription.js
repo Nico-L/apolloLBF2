@@ -1,4 +1,5 @@
 const axios = require('axios');
+const tokenSite = process.env.TOKEN_SITE
 
 const resolvers = {
     Query: {
@@ -14,8 +15,8 @@ const resolvers = {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${args.token}`
                 }
-            const adresse = 'http://cms.labonnefabrique.fr/Inscriptions-Ateliers'
-            ajoutInscription = await axios.post(adresse, params, {headers: headers})
+            const adresse = 'http://cms.labonnefabrique.fr/Inscriptions-Ateliers?token=' + tokenSite
+            ajoutInscription = await axios.post(adresse, params)
                 .then((retour) => {return retour.data.id})
                 .catch((erreur) => console.log('erreur', erreur))
             return {

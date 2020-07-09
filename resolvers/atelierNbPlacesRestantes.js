@@ -1,14 +1,11 @@
 const axios = require('axios');
+const tokenSite = process.env.TOKEN_SITE
 
 const resolvers = {
     Query: {
         atelierNbPlacesRestantes: async (parent, args) => {
-            const adresse = 'http://cms.labonnefabrique.fr/ateliers/' + args.id
-            atelier = await axios.get(adresse, {
-                headers: {
-                    Authorization: `Bearer ${args.token}`,
-                    },
-            })
+            const adresse = 'http://cms.labonnefabrique.fr/ateliers/' + args.id + '?token=' + tokenSite
+            atelier = await axios.get(adresse)
             .then(response => {
                 // Handle success.
                 //console.log("retour", response.data)

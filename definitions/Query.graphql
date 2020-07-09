@@ -15,17 +15,17 @@ extend type Query {
 }
 
 extend type Query {
-    atelier(id: String!, token: String!): atelierPayload
+    atelier(id: String!): atelierPayload
 }
 
 extend type Query {
-    atelierNbPlacesRestantes(id: String!, token: String!): atelierNbPlacesRestantesPayload
+    atelierNbPlacesRestantes(id: String!): atelierNbPlacesRestantesPayload
 }
 
 extend type Query {
-    findOneInscrit(id: String!, email:String!, token: String!): findOneInscritPayload
+    findOneInscrit(id: String!, email:String!): findOneInscritPayload
 }
 
 extend type Query {
-    ajoutInscription(inscription: String!, token: String!):ajoutInscriptionPayload
+    ajoutInscription(inscription: String!):ajoutInscriptionPayload
 }
