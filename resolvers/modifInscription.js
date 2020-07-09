@@ -3,7 +3,7 @@ const tokenSite = process.env.TOKEN_SITE
 
 const resolvers = {
     Query: {
-        ajoutInscription: async (parent, args) => {
+        modifInscription: async (parent, args) => {
             const dataInscription = JSON.parse(args.inscription)
             const params = {
                 email: dataInscription.email,
@@ -11,11 +11,10 @@ const resolvers = {
                 atelier: dataInscription.idAtelier
             }
             const headers = {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${args.token}`
+                'Content-Type': 'application/json'
                 }
-            const adresse = 'http://cms.labonnefabrique.fr/Inscriptions-Ateliers?token=' + tokenSite
-            ajoutInscription = await axios.post(adresse, params)
+            const adresse = 'http://cms.labonnefabrique.fr/Inscriptions-Ateliers/' + args.idInscription + '?token=' + tokenSite
+            ajoutInscription = await axios.put(adresse, params)
                 .then((retour) => {return retour.data.id})
                 .catch((erreur) => console.log('erreur', erreur))
             return {

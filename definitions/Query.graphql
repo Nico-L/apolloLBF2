@@ -29,3 +29,11 @@ extend type Query {
 extend type Query {
     ajoutInscription(inscription: String!):ajoutInscriptionPayload
 }
+
+extend type Query {
+    modifInscription(idInscription: String!, inscription: String!): modifInscriptionPayload
+}
+
+extend type Query {
+    effaceInscription(idInscription: String!): effaceInscriptionPayload
+}
