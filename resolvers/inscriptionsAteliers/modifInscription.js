@@ -1,5 +1,6 @@
 const axios = require('axios');
 const tokenSite = process.env.TOKEN_SITE
+const cms = process.env.ADRESSE_CMS
 
 const resolvers = {
     Mutation: {
@@ -13,7 +14,7 @@ const resolvers = {
             const headers = {
                 'Content-Type': 'application/json'
                 }
-            const adresse = 'http://cms.labonnefabrique.fr/Inscriptions-Ateliers/' + args.idInscription + '?token=' + tokenSite
+            const adresse = cms + 'Inscriptions-Ateliers/' + args.idInscription + '?token=' + tokenSite
             ajoutInscription = await axios.put(adresse, params)
                 .then((retour) => {return retour.data.id})
                 .catch((erreur) => console.log('erreur', erreur))

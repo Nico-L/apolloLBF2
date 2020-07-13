@@ -1,10 +1,11 @@
 const axios = require('axios');
 const tokenSite = process.env.TOKEN_SITE
+const cms = process.env.ADRESSE_CMS
 
 const resolvers = {
     Query: {
         atelier: async (parent, args) => {
-            const adresse = 'http://cms.labonnefabrique.fr/ateliers/' + args.id + '?token=' + tokenSite
+            const adresse = cms + args.id + '?token=' + tokenSite
             atelier = await axios.get(adresse)
             .then(response => {
                 // Handle success.

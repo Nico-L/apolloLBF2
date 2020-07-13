@@ -1,5 +1,6 @@
 const axios = require('axios');
 const tokenSite = process.env.TOKEN_SITE
+const cms = process.env.ADRESSE_CMS
 
 const resolvers = {
     Query: {
@@ -7,7 +8,7 @@ const resolvers = {
             const headers = {
                 'Content-Type': 'application/json'
             }
-            const adresse = 'https://cms.labonnefabrique.fr/users?email=' + args.email + '&token=' + tokenSite
+            const adresse = cms + 'users?email=' + args.email + '&token=' + tokenSite
             findUser = await axios.get(adresse, headers)
                 .then((retour) => {return retour.data})
                 .catch((error) => console.log('erreur findeUserMachine', error))
