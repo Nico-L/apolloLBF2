@@ -27,13 +27,13 @@ extend type Query {
 }
 
 extend type Query {
-    ajoutInscription(inscription: String!):ajoutInscriptionPayload
+    listeCreneauxDispo: listeCreneauxDispoPayload
 }
 
 extend type Query {
-    modifInscription(idInscription: String!, inscription: String!): modifInscriptionPayload
+    VerifUSerMachine(email: String!, machine: String!): VerifUSerMachinePayload
 }
 
 extend type Query {
-    effaceInscription(idInscription: String!): effaceInscriptionPayload
+    VerifUSerAbonnement(email: String!): verifUserAbonnementPayload
 }

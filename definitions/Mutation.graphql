@@ -14,3 +14,19 @@ extend type Mutation {
   ): MailgunEmailPayload
 }
 
+extend type Mutation {
+    ajoutInscription(inscription: String!):ajoutInscriptionPayload
+}
+
+extend type Mutation {
+    modifInscription(idInscription: String!, inscription: String!): modifInscriptionPayload
+}
+
+extend type Mutation {
+    effaceInscription(idInscription: String!): effaceInscriptionPayload
+}
+
+extend type Mutation {
+    reservation(userId: String!, nom: String, prenom: String!, machine: String, dateDebut: String, dateFin: String): reservationPayload
+}
+

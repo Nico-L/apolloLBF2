@@ -2,7 +2,7 @@ const axios = require('axios');
 const tokenSite = process.env.TOKEN_SITE
 
 const resolvers = {
-    Query: {
+    Mutation: {
         modifInscription: async (parent, args) => {
             const dataInscription = JSON.parse(args.inscription)
             const params = {
