@@ -30,3 +30,11 @@ extend type Mutation {
     reservation(userId: String!, nom: String, prenom: String!, machine: String, dateDebut: String, dateFin: String): reservationPayload
 }
 
+extend type Mutation {
+    ModifReservation(idReservation: String!, userId: String, nom: String, prenom: String, machine: String, dateDebut: String, dateFin: String): modifReservationPayload
+}
+
+extend type Mutation {
+    effaceReservation(idReservation: String!): effaceReservationPayload
+}
+

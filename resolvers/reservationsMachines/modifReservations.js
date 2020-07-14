@@ -4,18 +4,18 @@ const cms = process.env.ADRESSE_CMS
 
 const resolvers = {
     Mutation: {
-        reservation: async (parent, args) => {
+        ModifReservation: async (parent, args) => {
             const headers = {
                 'Content-Type': 'application/json'
             }
-            const adresse = cms + 'reservations?token=' + tokenSite
+            const adresse = cms + 'reservations/' + args.idReservation + '?token=' + tokenSite
             const params = {
-                user: args.userId,
+                user: args.email,
                 nom: args.nom || "",
                 prenom: args.prenom,
                 machine: args.machine
             }
-            ajoutReservation = await axios.post(adresse, params, headers)
+            ajoutReservation = await axios.put(adresse, params, headers)
                 .then((retour) => {return retour.data})
                 .catch((erreur) => console.log('erreur', erreur))
             let retourOK = false
