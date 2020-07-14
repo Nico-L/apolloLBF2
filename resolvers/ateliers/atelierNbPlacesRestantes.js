@@ -5,7 +5,7 @@ const cms = process.env.ADRESSE_CMS
 const resolvers = {
     Query: {
         atelierNbPlacesRestantes: async (parent, args) => {
-            const adresse = cms + args.id + '?token=' + tokenSite
+            const adresse = cms + 'ateliers/' + args.id + '?token=' + tokenSite
             atelier = await axios.get(adresse)
             .then(response => {
                 // Handle success.
