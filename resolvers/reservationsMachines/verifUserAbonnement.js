@@ -4,7 +4,7 @@ const cms = process.env.ADRESSE_CMS
 
 const resolvers = {
     Query: {
-        VerifUSerAbonnement: async (parent, args) => {
+        VerifUserAbonnement: async (parent, args) => {
             const headers = {
                 'Content-Type': 'application/json'
             }

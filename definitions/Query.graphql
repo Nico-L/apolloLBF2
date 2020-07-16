@@ -31,9 +31,9 @@ extend type Query {
 }
 
 extend type Query {
-    VerifUSerMachine(email: String!, machine: String!): VerifUSerMachinePayload
+    VerifUserMachine(email: String!, machine: String!): VerifUSerMachinePayload
 }
 
 extend type Query {
-    VerifUSerAbonnement(email: String!): verifUserAbonnementPayload
+    VerifUserAbonnement(email: String!): verifUserAbonnementPayload
 }

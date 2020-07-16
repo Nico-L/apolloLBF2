@@ -4,12 +4,11 @@ const cms = process.env.ADRESSE_CMS
 
 const resolvers = {
     Query: {
-        VerifUSerMachine: async (parent, args) => {
+        VerifUserMachine: async (parent, args) => {
             const headers = {
                 'Content-Type': 'application/json'
             }
             const adresse = cms +'users?email=' + args.email + '&' + args.machine + '=true&token=' + tokenSite
-            console.log('adresse', adresse)
             user = await axios.get(adresse, headers)
                 .then((retour) => {return retour.data})
                 .catch((error) => console.log('erreur findeUserMachine', error))
