@@ -1,3 +1,0 @@
-type VerifUSerMachinePayload {
-    userId: String!
-}

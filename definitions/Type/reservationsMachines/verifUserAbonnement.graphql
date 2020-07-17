@@ -1,3 +1,0 @@
-type verifUserAbonnementPayload {
-    estAbonne: Boolean!
-}
