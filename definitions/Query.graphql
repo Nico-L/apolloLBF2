@@ -33,3 +33,7 @@ extend type Query {
 extend type Query {
     userData(email: String!): userDataPayload
 }
+
+extend type Query {
+    listeReservationsByDate(date: String!): listeReservationsByDatePayload
+}

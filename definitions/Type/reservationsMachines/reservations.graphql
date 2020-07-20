@@ -1,0 +1,7 @@
+type reservationPayload {
+    estReserve: Boolean!
+}
+
+type listeReservationsByDatePayload {
+    reservationsByDate: String!
+}

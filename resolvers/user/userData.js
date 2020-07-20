@@ -19,7 +19,6 @@ const resolvers = {
                 userData.abonnement = u.abonnementMachine
                 userData.cnc = u.cnc
                 userData.laser = u.laser
-                userData.imprimante3D = u.imprimante3D
                 userData.scie_toupie = u.scie_toupie
                 userData.rabo_degau = u.rabo_degau
             }
