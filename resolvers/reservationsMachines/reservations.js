@@ -1,4 +1,5 @@
 const axios = require('axios');
+const uuid = require('uuid')
 const tokenSite = process.env.TOKEN_SITE
 const cms = process.env.ADRESSE_CMS
 
@@ -8,12 +9,16 @@ const resolvers = {
             const headers = {
                 'Content-Type': 'application/json'
             }
-            const adresse = cms + 'reservations?token=' + tokenSite
+            const adresse = cms + 'reservations-machines?token=' + tokenSite
             const params = {
-                user: args.userId,
-                nom: args.nom || "",
+                heuredebut: args.heureDebut,
+                heurefin: args.heureFin,
+                nom: args.nom,
                 prenom: args.prenom,
-                machine: args.machine
+                machine: args.machine,
+                user: args.user,
+                date: new Date(args.date),
+                uuid: uuid()
             }
             ajoutReservation = await axios.post(adresse, params, headers)
                 .then((retour) => {return retour.data})
