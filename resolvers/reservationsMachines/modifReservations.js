@@ -8,7 +8,7 @@ const resolvers = {
             const headers = {
                 'Content-Type': 'application/json'
             }
-            const adresse = cms + 'reservations/' + args.idReservation + '?token=' + tokenSite
+            const adresse = cms + 'reservations-machines/' + args.idReservation + '?token=' + tokenSite
             const params = {
                 user: args.email,
                 nom: args.nom || "",

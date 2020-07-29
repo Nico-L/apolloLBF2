@@ -8,7 +8,7 @@ const resolvers = {
             const headers = {
                 'Content-Type': 'application/json'
             }
-            const adresse = cms + 'reservations?date=' + args.date + '&token=' + tokenSite
+            const adresse = cms + 'reservations-machines?date=' + args.date + '&token=' + tokenSite
             console.log('adresse', adresse)
             reservationsByDate = await axios(adresse, headers)
                 .then((retour) => {return retour.data})
