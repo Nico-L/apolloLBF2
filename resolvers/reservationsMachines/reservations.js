@@ -23,9 +23,9 @@ const resolvers = {
             ajoutReservation = await axios.post(adresse, params, headers)
                 .then((retour) => {return retour.data})
                 .catch((erreur) => console.log('erreur', erreur))
-            let retourOK = false
-            if (ajoutReservation.id) {
-                retourOK = params.uuid
+            let retourOK = ""
+            if (ajoutReservation.uuid) {
+                retourOK = ajoutReservation.uuid
             }
             return {
                 reservationUuid: retourOK
