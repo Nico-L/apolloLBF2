@@ -25,10 +25,10 @@ const resolvers = {
                 .catch((erreur) => console.log('erreur', erreur))
             let retourOK = false
             if (ajoutReservation.id) {
-                retourOK = true
+                retourOK = params.uuid
             }
             return {
-                estReserve: retourOK
+                reservationUuid: retourOK
             }
         }
     }
