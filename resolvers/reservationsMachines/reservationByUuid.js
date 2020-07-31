@@ -13,7 +13,7 @@ const resolvers = {
                 .then((retour) => {return retour.data})
                 .catch((erreur) => {console.log('erreur reservationByUuid', erreur)})
             return {
-                reservationByUuid: JSON.stringify(reservationByUuid)
+                reservationByUuid: JSON.stringify(reservationByUuid[0])
             }
         }
     }
