@@ -3,9 +3,9 @@ type reservationPayload {
 }
 
 type listeReservationsByDatePayload {
-    reservationsByDate: String!
+    reservationsByDate: String
 }
 
 type reservationByUuidPayload {
-    reservationByUuid: String!
+    reservationByUuid: String
 }

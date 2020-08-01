@@ -10,10 +10,14 @@ const resolvers = {
             }
             const adresse = cms + 'reservations-machines/' + args.idReservation + '?token=' + tokenSite
             const params = {
-                user: args.email,
-                nom: args.nom || "",
+                heuredebut: args.heureDebut,
+                heurefin: args.heureFin,
+                nom: args.nom,
                 prenom: args.prenom,
-                machine: args.machine
+                machine: args.machine,
+                user: args.user,
+                date: new Date(args.date),
+                uuid: args.uuid
             }
             ajoutReservation = await axios.put(adresse, params, headers)
                 .then((retour) => {return retour.data})
