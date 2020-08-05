@@ -1,5 +1,6 @@
 const sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(process.env.SENDGRID_API);
+const cms = process.env.ADRESSE_CMS
 
 const resolvers = {
   Mutation: {
@@ -10,6 +11,7 @@ const resolvers = {
         templateId: args.templateId,
         dynamic_template_data: JSON.parse(args.dynamic_template_data)
       };
+      msg.dynamic_template_data.urlImageMail = cms.slice(0, -1) + msg.dynamic_template_data.urlImageMail
       sgMail
         .send(msg)
         .then(() => {
