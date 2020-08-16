@@ -19,7 +19,7 @@ const resolvers = {
                 .then((retour) => {return retour.data.uuid})
                 .catch((erreur) => console.log('erreur', erreur))
             return {
-                idInscription: ajoutInscription
+                uuid: ajoutInscription
             }
         }
     }
