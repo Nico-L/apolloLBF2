@@ -16,7 +16,7 @@ const resolvers = {
                 }
             const adresse = cms + 'Inscriptions-Ateliers/' + args.idInscription + '?token=' + tokenSite
             ajoutInscription = await axios.put(adresse, params)
-                .then((retour) => {return retour.data.id})
+                .then((retour) => {return retour.data.uuid})
                 .catch((erreur) => console.log('erreur', erreur))
             return {
                 idInscription: ajoutInscription
