@@ -41,3 +41,7 @@ extend type Query {
 extend type Query {
     reservationByUuid (uuid: String!): reservationByUuidPayload
 }
+
+extend type Query {
+    imgproxyKeys: imgproxyKeysPayload
+}
