@@ -43,5 +43,5 @@ extend type Query {
 }
 
 extend type Query {
-    imgproxyKeys: imgproxyKeysPayload
+    imgproxyURL (url: String!, resizing_type: String!, width: String!, height: String!, gravity: String!): imgproxyURLPayload
 }
