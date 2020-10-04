@@ -25,7 +25,7 @@ const resolvers = {
 
             const signature = sign(SALT, path, KEY)
             return {
-                imgproxyURL: `/${signature}${path}`
+                imgproxyURL: `https://imgproxy.labonnefabrique.fr/${signature}${path}`
             }
         }
     }
